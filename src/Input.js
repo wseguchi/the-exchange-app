@@ -11,6 +11,8 @@ function Input() {
     amount: 0,
     target_code: DataCurrencyList[0][0],
     output: [],
+    disabled: false,
+    show: true,
   });
   const handleChangeInput = (event) => {
     console.log(event.target.value);
@@ -36,7 +38,12 @@ function Input() {
         target_code={selected.target_code}
       />
     );
-    setSelected({ ...selected, output: [...selected.output, newOutput] });
+    setSelected({
+      ...selected,
+      output: newOutput,
+      disabled: true,
+      show: false,
+    });
   };
 
   return (
@@ -45,7 +52,12 @@ function Input() {
         <label htmlFor='base-code'>
           Convert From <div className='rotate'>&#8963;</div>
         </label>
-        <select name='base-code' id='base-code' onChange={handleChangeInput}>
+        <select
+          name='base-code'
+          id='base-code'
+          onChange={handleChangeInput}
+          disabled={selected.disabled}
+        >
           {DataCurrencyList.map((c) => (
             <option value={c[0]}>
               {c[0]} - {c[1]}
@@ -61,6 +73,7 @@ function Input() {
           name='amount'
           min='1'
           onInput={handleInputAmount}
+          disabled={selected.disabled}
         />
       </div>
       <div className='Output-currency Input-labels'>
@@ -71,6 +84,7 @@ function Input() {
           name='target-code'
           id='target-code'
           onChange={handleChangeOutput}
+          disabled={selected.disabled}
         >
           {DataCurrencyList.map((c) => (
             <option value={c[0]}>
@@ -80,7 +94,10 @@ function Input() {
         </select>
       </div>
       <div className='submit'>
-        <button onClick={addOutput}>
+        <button
+          onClick={addOutput}
+          style={{ display: selected.show ? 'block' : 'none' }}
+        >
           <FontAwesomeIcon icon={faMagnifyingGlassDollar} />
           <span> Convert</span>
         </button>

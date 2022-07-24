@@ -1,5 +1,7 @@
 import './App.css';
 import React, { useEffect, useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faRotateRight } from '@fortawesome/free-solid-svg-icons';
 
 function Output(props) {
   const [result, setResult] = useState([]);
@@ -29,13 +31,22 @@ function Output(props) {
 
   return (
     <div className='Output'>
-      <h1>
+      {/* <p className='super-sm'>{api_url}</p> */}
+      <label className='result'>Grand Total</label>
+      <h2>
         {final_result} {result.target_code}
-      </h1>
-      <p>
-        1 {result.base_code} = {Number(result.conversion_rate).toFixed(4)} {result.target_code}
+      </h2>
+      <p className='mb'>
+        1 {result.base_code} = {Number(result.conversion_rate).toFixed(4)}{' '}
+        {result.target_code}
       </p>
       <p className='super-sm'>Last Update: {last_update}</p>
+      <a href='/'>
+        <button>
+          <FontAwesomeIcon icon={faRotateRight} />
+          <span> Restart</span>
+        </button>
+      </a>
     </div>
   );
 }
