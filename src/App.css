@@ -9,7 +9,7 @@ body {
 }
 
 .logo {
-  margin: 0;
+  margin: 0 0 -5px 5px;
   position: relative;
   font-size: 3em;
   line-height: 0.75em;
@@ -37,6 +37,7 @@ body {
   padding: 30px 15px 15px 15px;
   text-align: center;
   align-items: center;
+  gap: 15px;
 }
 
 .Output {
