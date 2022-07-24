@@ -23,7 +23,7 @@ body {
 }
 
 .App {
-  width: 375px;
+  width: 355px;
   text-align: left;
   margin-top: 50px;
   border-radius: 3px;
@@ -84,6 +84,7 @@ select {
 
 select {
   appearance: none;
+  -webkit-appearance: none;
 }
 
 input::-webkit-outer-spin-button,
@@ -128,6 +129,7 @@ button {
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   font-size: 1em;
+  color: #1b263b;
 }
 
 .submit {
