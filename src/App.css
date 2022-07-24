@@ -23,7 +23,7 @@ body {
 }
 
 .App {
-  width: 355px;
+  width: 345px;
   text-align: left;
   margin-top: 25px;
   border-radius: 3px;
@@ -43,6 +43,7 @@ body {
 .Output {
   width: 100%;
   border-radius: 3px;
+  font-family: 'Nunito', sans-serif;
 }
 
 .Output h1 {
@@ -51,6 +52,7 @@ body {
   text-shadow: 1px 1px 1px #1b263b;
   padding: 10px;
   border-radius: 3px;
+  font-weight: 500;
 }
 
 .super-sm {
@@ -71,15 +73,16 @@ select {
   cursor: pointer;
   border: 1px solid #ccc;
   border-radius: 4px;
+  background-color: white;
   margin-bottom: 16px;
   resize: vertical;
   font-size: 1em;
   font-weight: 500;
   color: #404040;
-  text-align: center;
+  text-align: center !important;
+  align-items: center;
   font-family: 'Nunito', sans-serif;
   border-radius: 3px;
-  background-color: white;
 }
 
 select {
