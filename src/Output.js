@@ -33,7 +33,7 @@ function Output(props) {
         {final_result} {result.target_code}
       </h1>
       <p>
-        1 {result.base_code} = {result.conversion_rate} {result.target_code}
+        1 {result.base_code} = {Number(result.conversion_rate).toFixed(4)} {result.target_code}
       </p>
       <p className='super-sm'>Last Update: {last_update}</p>
     </div>
