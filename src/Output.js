@@ -41,12 +41,11 @@ function Output(props) {
         {result.target_code}
       </p>
       <p className='super-sm'>Last Update: {last_update}</p>
-      <a href='/'>
-        <button>
-          <FontAwesomeIcon icon={faRotateRight} />
-          <span> Restart</span>
-        </button>
-      </a>
+
+      <button onClick={() => window.location.reload(false)}>
+        <FontAwesomeIcon icon={faRotateRight} />
+        <span> Restart</span>
+      </button>
     </div>
   );
 }
