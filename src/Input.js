@@ -13,6 +13,7 @@ function Input() {
     output: [],
     disabled: false,
     show: true,
+    is_empty: false,
   });
   const handleChangeInput = (event) => {
     console.log(event.target.value);
@@ -22,7 +23,7 @@ function Input() {
   const handleInputAmount = (event) => {
     let amountFixed = Number(event.target.value).toFixed(2);
     console.log(event.target.value);
-    setSelected({ ...selected, amount: amountFixed });
+    setSelected({ ...selected, amount: amountFixed, is_empty: false });
   };
 
   const handleChangeOutput = (event) => {
@@ -31,19 +32,24 @@ function Input() {
   };
 
   const addOutput = (event) => {
-    let newOutput = (
-      <Output
-        base_code={selected.base_code}
-        amount={selected.amount}
-        target_code={selected.target_code}
-      />
-    );
-    setSelected({
-      ...selected,
-      output: newOutput,
-      disabled: true,
-      show: false,
-    });
+    if (selected.amount <= 0 || isNaN(selected.amount)) {
+      setSelected({ ...selected, is_empty: true });
+    } else {
+      let newOutput = (
+        <Output
+          base_code={selected.base_code}
+          amount={selected.amount}
+          target_code={selected.target_code}
+        />
+      );
+      setSelected({
+        ...selected,
+        output: newOutput,
+        disabled: true,
+        show: false,
+        is_empty: false,
+      });
+    }
   };
 
   return (
@@ -68,6 +74,7 @@ function Input() {
       <div className='Input-amount Input-labels'>
         <label htmlFor='amount'>Amount</label>
         <input
+          className={selected.is_empty ? 'empty-bg' : ''}
           type='number'
           id='amount'
           name='amount'

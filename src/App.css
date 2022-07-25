@@ -194,3 +194,8 @@ button:hover {
 .credits a:hover {
   color: #fca311;
 }
+
+.empty-bg {
+  border: tomato 2px solid;
+  box-shadow: 0px 0px 2px tomato;
+}

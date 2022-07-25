@@ -27,7 +27,12 @@ function Output(props) {
     result.time_last_update_unix * 1000
   ).toLocaleString('en-US');
 
-  let final_result = Number(result.conversion_result).toFixed(2);
+  // let final_result = Number(result.conversion_result).toFixed(2);
+
+  let dollarUSLocale = Intl.NumberFormat('en-US');
+  let final_result = dollarUSLocale.format(
+    Number(result.conversion_result).toFixed(2)
+  );
 
   return (
     <div className='Output'>
