@@ -1,4 +1,4 @@
-# Exchange App
+# The Exchange App
 
 ![Design preview for the Exchange App](./app-preview.png)
 
