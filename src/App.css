@@ -48,6 +48,15 @@ body {
   align-items: center;
   border-radius: 3px;
   font-family: 'Nunito', sans-serif;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 1s, opacity 0.3s linear;
+}
+
+.Output_transition {
+  visibility: visible !important;
+  opacity: 1 !important;
+  transition: visibility 0s, opacity 0.3s linear;
 }
 
 .Output h2 {
@@ -185,13 +194,13 @@ button:hover {
   z-index: 1;
 }
 
-.credits a,
+/* .credits a,
 .credits a:visited {
   text-decoration: none;
   color: #e5e5e5;
-}
+} */
 
-.credits a:hover {
+.credits:hover {
   color: #fca311;
 }
 
