@@ -10,7 +10,7 @@ root.render(
 
     <div className='credits'>
       <a href='https://github.com/wseguchi' target='_blank'>
-        Coded by Wildson Seguchi{' '}
+        Designed and coded by Wildson Seguchi
       </a>
     </div>
   </React.StrictMode>
