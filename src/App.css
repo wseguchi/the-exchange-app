@@ -194,13 +194,13 @@ button:hover {
   z-index: 1;
 }
 
-/* .credits a,
+.credits a,
 .credits a:visited {
   text-decoration: none;
   color: #e5e5e5;
-} */
+}
 
-.credits:hover {
+.credits a:hover {
   color: #fca311;
 }
 

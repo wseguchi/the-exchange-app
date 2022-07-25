@@ -42,7 +42,8 @@ function Output(props) {
       {/* <p className='super-sm'>{api_url}</p> */}
       <label className='result'>Grand Total</label>
       <h2>
-        {final_result} {result.api_response.target_code}
+        {props.target_code_symbol} {final_result}{' '}
+        {result.api_response.target_code}
       </h2>
       <p className='mb'>
         1 {result.api_response.base_code} ={' '}

@@ -7,11 +7,11 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <App />
-    <div
-      className='credits'
-      onClick={(window.open = 'https://github.com/wseguchi')}
-    >
-      Coded by Wildson Seguchi
+
+    <div className='credits'>
+      <a href='https://github.com/wseguchi' target='_blank'>
+        Coded by Wildson Seguchi{' '}
+      </a>
     </div>
   </React.StrictMode>
 );
