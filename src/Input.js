@@ -8,7 +8,7 @@ import { faMagnifyingGlassDollar } from '@fortawesome/free-solid-svg-icons';
 function Input() {
   const [selected, setSelected] = useState({
     base_code: DataCurrencyList[0].CurrCode,
-    amount: 0,
+    amount: 1,
     target_code: DataCurrencyList[3].CurrCode,
     target_code_symbol: DataCurrencyList[3].CurrSymbol,
     output: [],
