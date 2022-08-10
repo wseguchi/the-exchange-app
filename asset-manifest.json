@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/the-exchange-app/static/css/main.72e1dfb5.css",
-    "main.js": "/the-exchange-app/static/js/main.4646607b.js",
+    "main.js": "/the-exchange-app/static/js/main.a1a7a4b3.js",
     "index.html": "/the-exchange-app/index.html",
     "main.72e1dfb5.css.map": "/the-exchange-app/static/css/main.72e1dfb5.css.map",
-    "main.4646607b.js.map": "/the-exchange-app/static/js/main.4646607b.js.map"
+    "main.a1a7a4b3.js.map": "/the-exchange-app/static/js/main.a1a7a4b3.js.map"
   },
   "entrypoints": [
     "static/css/main.72e1dfb5.css",
-    "static/js/main.4646607b.js"
+    "static/js/main.a1a7a4b3.js"
   ]
 }
