@@ -19,7 +19,6 @@ function Input() {
     output_is_empty: false,
   });
   const handleChangeInput = (event) => {
-    console.log(event.target.value);
     setSelected({
       ...selected,
       base_code: event.target.value,
@@ -29,12 +28,10 @@ function Input() {
 
   const handleInputAmount = (event) => {
     let amountFixed = Number(event.target.value).toFixed(2);
-    console.log(event.target.value);
     setSelected({ ...selected, amount: amountFixed, amount_is_empty: false });
   };
 
   const handleChangeOutput = (event) => {
-    console.log(event.target.value);
     let i = event.target.value;
     let code_symbol = i.split(' ');
     setSelected({
@@ -87,7 +84,7 @@ function Input() {
           disabled={selected.disabled}
         >
           {DataCurrencyList.map((c) => (
-            <option value={c.CurrCode}>
+            <option key={c.CurrCode} value={c.CurrCode}>
               {c.CurrCode} - {c.CurrName}
             </option>
           ))}
@@ -115,12 +112,10 @@ function Input() {
           id='target-code'
           onChange={handleChangeOutput}
           disabled={selected.disabled}
+          defaultValue={'BRL R$'}
         >
           {DataCurrencyList.map((c) => (
-            <option
-              value={c.CurrCode + ' ' + c.CurrSymbol}
-              selected={c.CurrCode === 'BRL' && true}
-            >
+            <option key={c.CurrCode} value={c.CurrCode + ' ' + c.CurrSymbol}>
               {c.CurrCode} - {c.CurrName}
             </option>
           ))}
