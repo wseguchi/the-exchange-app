@@ -32,4 +32,4 @@ _Um aplicativo para a conversão de taxas de câmbio construído em React JS_
 
 - Wildson Seguchi
 - [Github](https://github.com/wseguchi)
-- [LinkedIn](https://www.linkedin.com/in/wildson-seguchi/)
+- [LinkedIn](https://www.linkedin.com/in/wildson-seguchi/?locale=en_US)
